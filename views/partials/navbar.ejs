@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li><a href="/" class="<%= page === '/' ? 'active' : '' %>">Home</a></li>
+        <li><a href="/about" class="<%= page === '/about' ? 'active' : '' %>">About</a></li>
+        <% if (user) { %>
+            <li><a href="/lego/sets" class="<%= page === '/lego/sets' ? 'active' : '' %>">View Collection</a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+            <li><a href="/register" class="<%= page === '/register' ? 'active' : '' %>">Register</a></li>
+            <li><a href="/login" class="<%= page === '/login' ? 'active' : '' %>">Login</a></li>
+        <% } %>
+    </ul>
+</nav>
